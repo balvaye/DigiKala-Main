@@ -1,0 +1,71 @@
+ 
+
+    .brand-slider {
+      max-width: 1290px;
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+      margin: auto;
+      margin-bottom: 30px;
+      
+      
+      
+    }
+
+    .brand-slider h3 {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .brand-track {
+      display: flex;
+      transition: transform 0.4s ease;
+    }
+
+    .brand {
+      min-width: 120px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 10px;
+      border-right: 1px solid #f0f0f0;
+      
+    }
+
+    .brand img {
+      max-width: 100%;
+      max-height: 60px;
+      object-fit: contain;
+    }
+
+    .nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      border: 1px solid #ccc;
+      background: #fff;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-btn:hover {
+      background: #f5f5f5;
+    }
+
+    .nav-left {
+      left: 5px;
+    }
+
+    .nav-right {
+      right: 5px;
+    }

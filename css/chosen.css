@@ -1,0 +1,114 @@
+
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  border: 1px solid lightgray;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 95%;
+  max-width: 1334px;
+  margin: auto;
+  margin-bottom: 30px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container h3 {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px;
+  margin: 0 0 20px 0;
+  padding-bottom: 10px;
+}
+
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: #fff;
+  border-radius: 0;
+}
+
+
+.cell:nth-child(6n + 1),
+.cell:nth-child(6n + 2),
+.cell:nth-child(6n + 3),
+.cell:nth-child(6n + 4),
+.cell:nth-child(6n + 5),
+.cell:nth-child(6n + 6) {
+  border-left: 1px solid lightgray;
+}
+
+
+.cell {
+  border-bottom: 1px solid lightgray;
+}
+.cell:nth-last-child(-n + 6) {
+  border-bottom: none; 
+}
+
+
+.product {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.product img {
+  max-width: 150px%;
+  max-height: 150px;
+  object-fit: contain;
+}
+
+
+.price-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 14px;
+  color: #222;
+  font-family:var(--font-number);
+
+.price-toman {
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            font-family: var(--font-number);
+            font-size: 14px;
+            img {
+              width: 16px;
+              height: 16px;
+            }
+          }
+        }
+.old-price {
+  text-decoration: line-through;
+  font-size: 14px;
+  color: #999;
+  font-family: var(--font-number);
+}
+
+.discount {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background:#D32F2F;
+  color:white;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-family: var(--font-number);
+}

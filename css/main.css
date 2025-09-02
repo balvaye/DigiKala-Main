@@ -1,0 +1,72 @@
+@import "./setting.css";
+@import "./header.css";
+@import "./story.css";
+@import "./slider.css";
+@import "./category.css";
+@import "./wonderfull.css";
+@import "./gallery.css";
+@import "./favorites.css";
+@import "./widget.css";
+@import "./ondemand.css";
+@import "./bar.css";
+@import "./banner.css";
+@import "./berand.css";
+@import "./picture.css";
+@import "./footer.css";
+@import "./chosen.css";
+@import "./readings.css";
+@import "./about.css";
+@import "./wrap.css";
+/* ===== MegaMenu (RTL) ===== */
+.header-menu-center { position: relative; z-index: 60; }
+
+.catmega { position: static; } /* آیتم nav */
+.catmega__panel{
+  position: absolute;
+  inset-inline-end: 0;          /* هم‌تراز با راست کانتینر هدر */
+  top: calc(100% + 8px);
+  width: min(1100px, 96vw);
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 24px 48px rgba(0,0,0,.08);
+  display:none;
+  grid-template-columns: 270px 1fr; 
+  overflow:hidden;
+  max-height: 72vh;
+}
+.catmega:hover .catmega__panel,
+.catmega:focus-within .catmega__panel,
+.catmega.is-open .catmega__panel { display:grid; }
+
+
+.catmega__sidebar{
+  list-style:none; margin:0; padding:8px 0; background:#fafafa;
+  border-inline-start:1px solid #e5e7eb; max-height:72vh; overflow:auto;
+}
+.catmega__sidebar li a{
+  display:flex; align-items:center; gap:10px;
+  padding:12px 16px; font-weight:700; text-decoration:none; color:#111827;
+}
+.catmega__sidebar li.is-active a{
+  background:#fff; border-inline-start:3px solid #ef394e;
+}
+.catmega__sidebar small{color:#6b7280; font-weight:400}
+
+
+.catmega__content{ padding:16px; max-height:72vh; overflow:auto; }
+.catmega__sub{ display:none; }
+.catmega__sub.is-active{ display:block; }
+
+
+.cat-cols{ display:grid; gap:18px; grid-template-columns:repeat(4, minmax(180px,1fr)); }
+
+.cat-cols .col h4{ margin:0 0 10px; font-size:15px; display:flex; align-items:center; gap:8px;}
+.cat-cols .col h4::after{  font-weight:900; }
+.cat-cols .col ul{ list-style:none; margin:0; padding:0; display:grid; gap:8px; }
+.cat-cols .col a{ text-decoration:none; color:#374151; font-size:14px; }
+.cat-cols .col a:hover{ color:#ef394e; }
+
+
+
+

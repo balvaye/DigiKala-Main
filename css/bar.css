@@ -1,0 +1,124 @@
+:root{
+    --green:#19B66C;        
+    --green-dark:#0f8a52;
+    --bg:#eef6f2;           
+    --pill:#ffffff;         
+    --badge:#d23b3b;        
+    --text:#1f2937;
+    --muted:#6b7280;
+    --radius:20px;
+    --shadow:0 8px 24px rgba(0,0,0,.08);
+  }
+
+  body{
+    margin:0; background:#f7f7f7; color:var(--text);
+    font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue","Noto Sans",Arial,"Apple Color Emoji","Segoe UI Emoji";
+    line-height:1.6;
+  }
+
+  .hero{
+    max-width:1335px; margin:24px auto; padding:0 16px;
+  }
+
+  .banner{
+    position:relative;
+    display:flex; align-items:center; justify-content:space-between;
+    gap:24px;
+    background: var(--bg);
+    border-radius: var(--radius);
+    padding:24px;
+    box-shadow: var(--shadow);
+    overflow:hidden;
+    width: 1334px;
+  }
+
+ 
+  .banner::before{
+    content:"";
+    position:absolute; inset:0;
+    background:
+      radial-gradient(#cfe8dc 1px, transparent 1px) 0 0/36px 36px,
+      radial-gradient(#dfeee7 1px, transparent 1px) 18px 18px/36px 36px;
+    opacity:.4; pointer-events:none;
+  }
+
+  .left-cluster{
+    display:flex; align-items:center; gap:16px; z-index:1;
+  }
+
+  .pill-btn{
+    display:inline-flex; align-items:center; gap:10px;
+    background:#fff; color:var(--green);
+    padding:10px 16px; border-radius:999px; border:1px solid #e5e7eb;
+    white-space:nowrap; box-shadow:0 2px 8px rgba(0,0,0,.05);
+    text-decoration:none; font-weight:600;
+    transition:transform .15s ease, box-shadow .15s ease, color .15s ease, border-color .15s ease;
+  }
+  .pill-btn:hover{ transform:translateY(-1px); box-shadow:0 6px 18px rgba(0,0,0,.08); color:var(--green-dark); border-color:#d1d5db;}
+  .pill-btn svg{ width:18px; height:18px; flex:0 0 18px; }
+
+  .product-strip{
+    display:flex; align-items:center; gap:18px;
+  }
+
+  .prod{
+    position:relative; width:78px; height:78px; flex:0 0 78px;
+    border-radius:50%;
+    background:#fff; display:grid; place-items:center;
+    box-shadow:0 4px 14px rgba(0,0,0,.08);
+  }
+  .prod img{
+    width:64px; height:64px; object-fit:contain; border-radius:50%;
+    filter: saturate(1.05);
+  }
+
+  .badge{
+    position:absolute; bottom:-8px; right:50%; transform:translateX(50%);
+    background:var(--badge); color:#fff; font-weight:700; font-size:12px;
+    padding:4px 10px; border-radius:999px;
+    box-shadow:0 6px 14px rgba(210,59,59,.35);
+    letter-spacing:.2px;
+  }
+
+  .headline{
+    display:flex; align-items:center; 
+    gap:14px; 
+    z-index:1; 
+    margin-inline-start:auto;
+  }
+  .headline h2{
+    margin:0; 
+    font-size:28px; 
+    color:var(--green); 
+    font-weight:800; 
+    white-space:nowrap;
+  }
+  .discount-pill{
+    background:#0a8f58; 
+    color:#fff; 
+    border-radius:999px;
+    padding:10px 16px; 
+    font-weight:800; 
+    font-size:14px; white-space:nowrap;
+    box-shadow:0 6px 18px rgba(10,143,88,.35);
+  }
+
+  .basket{
+    width:64px; height:64px; object-fit:contain; flex:0 0 64px; z-index:1;
+  }
+
+  /* واکنش‌گرا */
+  @media (max-width:960px){
+    .headline h2{ font-size:22px; }
+    .prod{ width:68px; height:68px; }
+    .prod img{ width:56px; height:56px; }
+    .basket{ width:54px; height:54px; }
+  }
+  @media (max-width:720px){
+    .banner{ flex-wrap:wrap; gap:16px; padding:18px; }
+    .left-cluster{ order:2; width:100%; justify-content:flex-start; flex-wrap:wrap; }
+    .product-strip{ overflow-x:auto; padding-bottom:6px; }
+    .product-strip::-webkit-scrollbar{ height:6px; }
+    .product-strip::-webkit-scrollbar-thumb{ background:#d1d5db; border-radius:999px; }
+    .headline{ order:1; width:100%; justify-content:space-between; }
+  }

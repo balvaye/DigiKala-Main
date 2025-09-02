@@ -1,0 +1,93 @@
+.about {
+  width: 100%;
+  margin: 32px; 
+  padding: 0 16px;
+}
+
+.about__inner{
+  display:flex;
+  align-items:flex-start;
+  gap:24px;
+  justify-content: center;
+}
+
+
+.about__text{
+  flex: 1 1 720px;   
+  width:70%;  
+  text-align: right;
+}
+
+.about__text h2 {
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.about__desc {
+  color: #6b7280;
+  line-height: 2;
+  max-height: 90px;
+  overflow: hidden;
+  position: relative;
+}
+.about__desc::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 36px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff);
+}
+
+
+.about__more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  color: #19bfd3;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+}
+.about__more .icon {
+  width: 16px;
+  height: 16px;
+  transform: rotate(180deg);
+}
+
+
+.about__badges-2{
+  display:flex;
+  gap:12px;
+  flex: 0 0 auto;  
+}
+
+.badge-2 {
+  width: 150px;
+  height: 100px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.badge-2 img{ max-width:80%; max-height:80%; object-fit:contain; }
+.spacer{
+  flex: 1 1 0;       
+  min-width: 60px;    
+}
+
+.about__desc.is-open {
+  max-height: none;
+}
+.about__desc.is-open::after {
+  display: none;
+}
+.about__more.is-open .icon {
+  transform: rotate(0deg);
+}

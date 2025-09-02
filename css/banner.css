@@ -1,0 +1,50 @@
+body {
+      font-family: tahoma, sans-serif;
+      background: #fff;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+      align-content: center;
+    }
+
+    .banner-container {
+      display: flex;
+      gap: 15px;
+      padding: 20px;
+      height: 258px;
+      width: 80%;
+      max-width: 1335px;
+      margin:auto
+      
+    }
+
+    .banner {
+      flex: 1;
+      border-radius: 15px;
+      overflow: hidden;
+      position: relative;
+      height: 258px:
+      
+
+    }
+
+    .banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+      padding: 0%;
+      
+    }
+
+    .banner button {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background: white;
+      border: none;
+      border-radius: 20px;
+      padding: 8px 20px;
+      font-size: 14px;
+      cursor: pointer;
+      align-items: center;
+    }

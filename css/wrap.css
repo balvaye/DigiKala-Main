@@ -1,0 +1,160 @@
+:root {
+  --dk-bg: #39486a;
+  --dk-red: #ef394e;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --radius: 14px;
+  --max: 1280px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Helvetica,
+    Arial, sans-serif;
+  background: #fff;
+  color: #111827;
+}
+.wrap {
+  max-width: 1643px;
+  margin: 40px;
+  padding: 0 px;
+}
+.dk-appbar {
+  background: var(--dk-bg);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+}
+.dk-appbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+[dir="rtl"] .dk-appbar__inner {
+  flex-direction: row-reverse;
+}
+.dk-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.dk-title {
+  color: #fff;
+  font-weight: 800;
+  margin: 0;
+  font-size: clamp(14px, 2.2vw, 20px);
+  white-space: nowrap;
+  text-align: right;
+  .dk-title img {
+    width: 20%;
+    height: 20%;
+  }
+}
+.dk-toggle {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  border: 0;
+  outline: 0;
+  background: var(--dk-red);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.dk-toggle svg {
+  transition: transform 0.2s ease;
+}
+.dk-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.dk-more {
+  width: 46px;
+  height: 46px;
+  border: 0;
+  outline: 0;
+  border-radius: 10px;
+  background: #f3f4f6;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.dk-more svg {
+  opacity: 0.9;
+}
+.dk-stores {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.dk-store img {
+  border-radius: 5px;
+}
+[dir="rtl"] .dk-stores {
+  flex-direction: row-reverse;
+}
+.dk-store {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  text-decoration: none;
+  min-height: 46px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.dk-store:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+.dk-ico {
+  width: 26px;
+  height: 26px;
+  border-radius: 7px;
+  display: grid;
+  place-items: center;
+  background: #eef2ff;
+  color: #111827;
+  font-weight: 700;
+  font-size: 14px;
+}
+.dk-labels {
+  line-height: 1.1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  text-align: right;
+}
+.dk-sub {
+  font-size: 11px;
+  color: var(--muted);
+}
+.dk-brand {
+  font-size: 15px;
+  font-weight: 800;
+  color: #111827;
+}
+.dk-appbar.is-collapsed .dk-stores {
+  display: none;
+}
+.dk-appbar.is-collapsed .dk-toggle svg {
+  transform: rotate(180deg);
+}
+@media (max-width: 720px) {
+  .dk-stores {
+    display: none;
+  }
+  .dk-appbar.show-stores .dk-stores {
+    display: flex;
+  }
+}

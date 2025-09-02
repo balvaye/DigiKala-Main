@@ -1,0 +1,43 @@
+.favorites{
+    width: 100%;
+    height: 350px;
+    margin: 10px 0;
+    text-align: center;
+    margin-bottom:50px;
+
+    .h3{ font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+        font-size: 60px;
+        margin-bottom: 25px;
+    }
+    .favorites-center{
+        width: 70%;
+        height: 100%;
+        margin: 0 auto;
+        .favorites-center-item{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            .favorites-center-item-product{
+                width: fit-content;
+                height: 100%;
+                img{
+                    width: 100px;
+                    height: 100px;
+                    display: block;
+                    margin: 0 auto;
+                }
+                h3{
+                    text-align: center;
+                    font-family: var(--font-family);
+                    font-size: 12px;
+                    margin-top: 15px;
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+
+}
